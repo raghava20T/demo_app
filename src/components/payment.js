@@ -15,21 +15,21 @@ const Payment = () => {
     <Layout>
       <div className="bg-primary-color border border-slate-200 rounded-lg max-w-[600px] flex flex-col justify-center w-full px-5 py-5">
         <div className="rounded-full bg-paper-color custom-shadow flex px-5 py-2 gap-5 w-fit m-auto justify-center items-center mb-10">
-          <div className="flex gap-5">
-            <div className="bg-paper-color w-10 rounded-full flex justify-center items-center custom-shadow shrink-0">
+          <div className="flex gap-5 items-center">
+            <div className="bg-paper-color p-2 rounded-full flex justify-center items-center custom-shadow shrink-0">
               <HiOutlineLocationMarker className="text-[#AD37E0]" />
             </div>
-            <div className="text-sm">
+            <div className="text-sm flex gap-2">
               <p>50</p>
               <p>Cities</p>
             </div>
           </div>
 
-          <div className="flex gap-5">
-            <div className="bg-paper-color w-10 rounded-full flex justify-center items-center custom-shadow shrink-0">
+          <div className="flex gap-5 items-center">
+            <div className="bg-paper-color p-2 rounded-full flex justify-center items-center custom-shadow shrink-0">
               <HiOutlineLocationMarker className="text-[#AD37E0]" />
             </div>
-            <div className="text-sm">
+            <div className="text-sm flex gap-2">
               <p>60</p>
               <p>Clinics</p>
             </div>

@@ -19,4 +19,5 @@
 }
 .payment__ul li:hover {
   background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+  cursor: pointer;
 }
