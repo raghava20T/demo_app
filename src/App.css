@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-shadow {
+  box-shadow: -5px -5px 10px #faf6fb, 5px 5px 10px #dfd3e1;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-background {
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.payment__ul li p > svg path {
+  fill: #ad37e0;
+}
+.payment__ul li:hover p > svg path {
+  fill: white;
+}
+.payment__ul li:hover label {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.payment__ul li:hover {
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
 }
