@@ -1,7 +1,5 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import { AiOutlineCreditCard, AiOutlineWifi } from "react-icons/ai";
-import { BsCamera, BsBank2 } from "react-icons/bs";
 import {
   AmazonIcon,
   CreditCardIcon,
@@ -22,7 +20,7 @@ import Header from "../common/Header";
 const Payment = () => {
   return (
     <Layout>
-      <div className="bg-primary-color rounded-lg max-w-[600px] flex flex-col justify-center w-full px-5 py-5">
+      <div className="bg-primary-color max-w-[600px] flex flex-col justify-center w-full px-5 py-5">
         <Header />
 
         <div className="min-w-[200px] w-full max-w-[400px] h-[200px] debit__card_shadow rounded-[35px] m-auto mb-10 flex flex-col p-6 text-white relative">

@@ -54,6 +54,14 @@
   text-fill-color: transparent;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 /* component styles */
 .payment__ul li > svg path {
   fill: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
@@ -128,4 +136,74 @@
 }
 .heartBeat__shadow {
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.16);
+}
+
+.advantage__shadow {
+  box-shadow: -10px -10px 20px #f0c9df, 10px 10px 20px #cfa1bb !important;
+}
+
+.card__arrow_shadow {
+  background: linear-gradient(104.14deg, #d63078 -8.3%, #e12d5c 105.62%);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.15),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card__time_shadow {
+  background: linear-gradient(97.37deg, #af36d8 -25.57%, #db2e6b 102.74%);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.15),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.next__appointment_card_shadow {
+  background: #f3edf4;
+  box-shadow: inset -5px -5px 10px #faf6fb, inset 5px 5px 10px #dfd3e1;
+  border-radius: 30px;
+}
+.next__appointment_card_next_shadow {
+  background: linear-gradient(99.91deg, #ae36db 0%, #ec2c41 100%);
+  box-shadow: -10px -10px 20px #faf6fb, 10px 10px 20px #dfd3e1;
+}
+.next__appointment__button_shadow {
+  background: #f3edf4;
+  box-shadow: -10px -10px 20px #faf6fb, 10px 10px 20px #dfd3e1;
+}
+.card__button_cancel {
+  background: linear-gradient(104.14deg, #cf318a -8.3%, #de2e63 105.62%);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.15),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card__button_reschedule {
+  background: linear-gradient(104.14deg, #da2f6c -8.3%, #eb2c43 105.62%);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.15),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.advantage__checkbox input:checked:after {
+  content: "";
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+}
+.advantage__checkbox input:before {
+  content: "";
+  background: #f3edf4;
+  box-shadow: -1px -1px 2px #ffffff, 1px 1px 2px #e3d7e4,
+    inset -1px -1px 2px #ffffff, inset 1px 1px 2px #d9cadc;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.slider__background::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #ad37e0 0%, #ee2b3b 101.91%);
+  border-radius: 20px;
 }
