@@ -2,17 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Metropolis-black";
+  src: url("./fonts/metropolis.black.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-bold";
+  src: url("./fonts/metropolis.bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-extra-bold";
+  src: url("./fonts/metropolis.extra-bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-extra-light";
+  src: url("./fonts/metropolis.extra-light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-light";
+  src: url("./fonts/metropolis.light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-medium";
+  src: url("./fonts/metropolis.medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-regular";
+  src: url("./fonts/metropolis.regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-semi-bold";
+  src: url("./fonts/metropolis.semi-bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Metropolis-thin";
+  src: url("./fonts/metropolis.thin.otf") format("opentype");
+}
+
+/* global styles */
 .custom-shadow {
   box-shadow: -5px -5px 10px #faf6fb, 5px 5px 10px #dfd3e1;
 }
 .custom-background {
   background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
 }
-.payment__ul li p > svg path {
-  fill: #ad37e0;
+.custom-text {
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
-.payment__ul li:hover p > svg path {
-  fill: white;
+
+/* component styles */
+.payment__ul li > svg path {
+  fill: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+}
+.payment__ul li:hover > svg path {
+  fill: white !important;
+}
+.payment__ul li label {
+  font-family: "Metropolis-extra-bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 20px;
 }
 .payment__ul li:hover label {
   color: white;
@@ -20,4 +74,58 @@
 .payment__ul li:hover {
   background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
   cursor: pointer;
+}
+.payment__ul > li {
+  position: relative;
+}
+.payment__ul > li:hover:before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+  filter: blur(25px);
+  width: 80%;
+  left: 10%;
+  height: 20px;
+  bottom: -6px;
+}
+
+.debit__card_shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+}
+
+.debit__card_shadow::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+  filter: blur(25px);
+  width: 80%;
+  left: 10%;
+  height: 25px;
+  bottom: -10px;
+  border-radius: 20px;
+}
+.buynow__shadow::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(122.62deg, #ad37e0 0%, #ee2b3b 100%);
+  filter: blur(25px);
+  width: 80%;
+  left: 10%;
+  height: 14px;
+  bottom: -10px;
+  border-radius: 20px;
+}
+
+.hdfc__shadow {
+  box-shadow: -10px -10px 20px #faf6fb, 10px 10px 20px #dfd3e1;
+}
+.heartBeat__shadow {
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.16);
 }

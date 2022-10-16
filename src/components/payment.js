@@ -1,104 +1,100 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import { AiOutlineCreditCard, AiOutlineWifi } from "react-icons/ai";
 import { BsCamera, BsBank2 } from "react-icons/bs";
-import Amazon from "../images/amazon-icon.svg";
-import Gpay from "../images/google-pay-icon.webp";
-import Phonepe from "../images/phonepe-logo-icon.webp";
-import Paytm from "../images/Paytm-Logo.wine.png";
-import Freecharge from "../images/freecharge.png";
-import Mobi from "../images/mobi.png";
+import {
+  AmazonIcon,
+  CreditCardIcon,
+  EllipseOne,
+  EllipseTwo,
+  freechargeIcon,
+  gpayIcon,
+  mobiIcon,
+  PayCashIcon,
+  paytmIcon,
+  phonepeIcon,
+  visaIcon,
+  wifiIcons,
+  BankIcon,
+} from "../assets/index";
+import Header from "../common/Header";
 
 const Payment = () => {
   return (
     <Layout>
-      <div className="bg-primary-color border border-slate-200 rounded-lg max-w-[600px] flex flex-col justify-center w-full px-5 py-5">
-        <div className="rounded-full bg-paper-color custom-shadow flex px-5 py-2 gap-5 w-fit m-auto justify-center items-center mb-10">
-          <div className="flex gap-5 items-center">
-            <div className="bg-paper-color p-2 rounded-full flex justify-center items-center custom-shadow shrink-0">
-              <HiOutlineLocationMarker className="text-[#AD37E0]" />
-            </div>
-            <div className="text-sm flex gap-2">
-              <p>50</p>
-              <p>Cities</p>
-            </div>
-          </div>
+      <div className="bg-primary-color rounded-lg max-w-[600px] flex flex-col justify-center w-full px-5 py-5">
+        <Header />
 
-          <div className="flex gap-5 items-center">
-            <div className="bg-paper-color p-2 rounded-full flex justify-center items-center custom-shadow shrink-0">
-              <HiOutlineLocationMarker className="text-[#AD37E0]" />
-            </div>
-            <div className="text-sm flex gap-2">
-              <p>60</p>
-              <p>Clinics</p>
-            </div>
+        <div className="min-w-[200px] w-full max-w-[400px] h-[200px] debit__card_shadow rounded-[35px] m-auto mb-10 flex flex-col p-6 text-white relative">
+          <div className="flex justify-between gap-5 mb-5">
+            <p className="font-extrabold text-base">Evelyn Tylor</p>
+            <img src={wifiIcons} alt="icon" />
           </div>
-        </div>
-
-        <div className="min-w-[300px] w-full max-w-[400px] h-[200px] custom-background rounded-[35px] m-auto mb-10 flex flex-col gap-5 p-6 text-white">
-          <div className="flex justify-between gap-5">
-            <p className="font-bold">Evelyn Tylor</p>
-            <AiOutlineWifi className="text-2xl" />
-          </div>
-          <div className="flex justify-start gap-4 font-bold">
+          <div className="flex justify-start gap-4 font-extrabold text-xl mb-6">
             <p>3215</p>
             <p>6584</p>
             <p>8468</p>
             <p>5888</p>
           </div>
           <div className="flex justify-between gap-2">
-            <div className="flex flex-col gap-3">
-              <p className="text-sm">Expire</p>
-              <p className="font-bold">12/24</p>
+            <div className="flex flex-col gap-1">
+              <p className="text-[10px]">Expire</p>
+              <p className="font-extrabold">12/24</p>
             </div>
-            <div className="flex flex-col gap-3">
-              <p className="text-sm">CVV</p>
-              <p className="font-bold">229</p>
+            <div className="flex flex-col gap-1">
+              <p className="text-[10px]">CVV</p>
+              <p className="font-extrabold">229</p>
             </div>
-            <div className="text-3xl italic flex items-end">VISA</div>
+            <div class="flex items-end">
+              <img src={visaIcon} alt="icon" />
+            </div>
           </div>
+
+          <img
+            src={EllipseOne}
+            alt="icon"
+            className="absolute left-0 top-[32%]"
+          />
+          <img
+            src={EllipseTwo}
+            alt="icon"
+            className="absolute -right-2 -top-[10%]"
+          />
         </div>
 
-        <div className="flex flex-col mb-10">
-          <p className="text-base">Choose Payment</p>
-          <p className="text-[40px] font-bold">Method</p>
+        <div className="flex flex-col mb-5">
+          <p className="text-base font-bold leading-[16px]">Choose Payment</p>
+          <p className="text-[40px] font-black leading-[40px]">Method</p>
         </div>
 
-        <ul className="flex flex-col w-full gap-5 payment__ul">
-          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between p-4 custom-shadow">
+        <ul className="flex flex-col w-full gap-5 payment__ul relative">
+          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between items-center p-4 custom-shadow">
             <label>Pay Cash</label>
-            <p>
-              <BsCamera className="text-xl" />
-            </p>
+            <PayCashIcon />
           </li>
-          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between p-4 custom-shadow">
+          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between items-center p-4 custom-shadow">
             <label>Debit / Credit Card</label>
-            <p>
-              <AiOutlineCreditCard className="text-xl" />
+            <CreditCardIcon />
+          </li>
+          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between items-center p-4 custom-shadow">
+            <label className="w-full">UPI</label>
+            <p className="flex gap-3 justify-end w-full">
+              <img src={AmazonIcon} alt="icon" width="20" height="20"></img>
+              <img src={gpayIcon} alt="icon" width="20" height="20"></img>
+              <img src={phonepeIcon} alt="icon" width="20" height="20"></img>
+              <img src={paytmIcon} alt="icon" width="30" height="30"></img>
             </p>
           </li>
-          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between p-4 custom-shadow">
-            <label>UPI</label>
-            <p className="flex gap-3">
-              <img src={Amazon} alt="icon" width="18" height="18"></img>
-              <img src={Gpay} alt="icon" width="22" height="10"></img>
-              <img src={Phonepe} alt="icon" width="22" height="10"></img>
-              <img src={Paytm} alt="icon" width="32" height="10"></img>
+          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between items-center p-4 custom-shadow">
+            <label className="w-full">Wallet</label>
+            <p className="flex gap-3 justify-end w-full">
+              <img src={freechargeIcon} alt="icon" width="20" height="20"></img>
+              <img src={mobiIcon} alt="icon" width="20" height="20"></img>
             </p>
           </li>
-          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between p-4 custom-shadow">
-            <label>Wallet</label>
-            <p className="flex gap-3">
-              <img src={Freecharge} alt="icon" width="22" height="10"></img>
-              <img src={Mobi} alt="icon" width="22" height="4"></img>
-            </p>
-          </li>
-          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between p-4 custom-shadow">
+          <li className="w-full rounded-full bg-paper-color flex gap-5 justify-between items-center p-4 custom-shadow">
             <label>Net Banking</label>
-            <p>
-              <BsBank2 className="text-xl" />
-            </p>
+            <BankIcon />
           </li>
         </ul>
       </div>

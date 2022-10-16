@@ -7,9 +7,18 @@ module.exports = {
       colors: {
         "primary-color": "#F5F5F5",
         "paper-color": "#F3EDF4",
+        "black-color": "#252525",
       },
-      bgGradientDeg: {
-        75: "122.62deg",
+      fontFamily: {
+        thin: ["Metropolis-thin"],
+        extralight: ["Metropolis-extra-light"],
+        light: ["Metropolis-light"],
+        normal: ["Metropolis-regular"],
+        medium: ["Metropolis-medium"],
+        semibold: ["Metropolis-semi-bold"],
+        bold: ["Metropolis-bold"],
+        extrabold: ["Metropolis-extra-bold"],
+        black: ["Metropolis-black"],
       },
     },
   },
